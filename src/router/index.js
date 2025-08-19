@@ -14,7 +14,12 @@ const router = createRouter({
       path: '/mentor',
       component: mentorList,
     },
-    { path: '/mentor/:id', component: MentorDetail },
+    {
+      path: '/mentor/:id',
+      component: MentorDetail,
+      props: true,
+      children: [{ path: 'contact', component: ContactMentor }],
+    },
     { path: '/register', component: MentorReg },
     { path: '/contact', component: ContactMentor },
     { path: '/requests', component: ReqRecieved },

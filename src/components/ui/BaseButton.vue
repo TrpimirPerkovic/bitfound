@@ -8,7 +8,6 @@
 </template>
 
 <script>
-// renderiranje ili linka ili btn-a
 export default {
   props: {
     mode: {
